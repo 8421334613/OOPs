@@ -22,17 +22,37 @@ class chatbot:
         
         
     def menu(self):
-        num=int(input("1.login\n2.logout\n3.write a post\n4.massage a friend\n5.exit\n"))
+        num=int(input("1.sinup\n2.signin\n3.write a post\n4.massage a friend\n5.exit\n"))
         
         if num==1:
-            pass
+            self.sinup()
         elif num==2:
-            pass
+            self.signin()
         elif num==3:
             pass
         elif num==4:
             pass
         elif num==5:
             exit()
+            
+    def sinup(self):
+        self.username=input("enter your name:")
+        self.pasword=int(input("enter your pasword:"))
+        print("sucessfully sinup")
+        print("\n")
+        self.menu()
+        
+    def signin(self):
+        use=input("enter your name:")
+        passw=int(input("enter your pasword:"))
+        if use==self.username and passw==self.pasword:
+            print("sucessfully signin")
+            self.menu()
+        else:
+            print("press 1 and sign up first")
+            self.menu()
+        
+    
         
 onj=chatbot()
+onj.sinup()
