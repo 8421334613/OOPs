@@ -29,9 +29,9 @@ class chatbot:
         elif num==2:
             self.signin()
         elif num==3:
-            pass
+            self.mypost()
         elif num==4:
-            pass
+            self.massage()
         elif num==5:
             exit()
             
@@ -51,6 +51,20 @@ class chatbot:
         else:
             print("press 1 and sign up first")
             self.menu()
+    def mypost(self):
+        if self.login==True:
+            post=input("write your post:")
+            print("your post is:",post)
+            
+    def massage(self):
+        if self.login==True:
+            friend=input("enter your friend name:")
+            msg=input("enter your massage:")
+            print(f"your massage to {friend} is:{msg}")
+            
+    def exit(self):
+        print("thank you for using our app")
+        self.login=False
         
     
         
